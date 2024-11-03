@@ -11,7 +11,7 @@ mkdir paralogs
 while read -r paralog_locus; do  mv "$paralog_locus" paralogs/; done < paralogs_list.txt
 ```
 
-Os SNPSs serão chamados a partir da maior sequência recuperada para cada loco, representadas por um arquivo .fasta armazenado nas pastas com sufixo `supercontig.fasta`. É possível copiar estes arquivos para uma única pasta:
+Os SNPSs serão chamados a partir da maior sequência recuperada para cada loco, representadas por um arquivo `.fasta` armazenado nas pastas com sufixo `supercontig.fasta`. É possível copiar estes arquivos para uma única pasta:
 
 ```
 mkdir supercontigs
