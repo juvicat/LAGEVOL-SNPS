@@ -1,16 +1,16 @@
 #!/bin/bash
 
 # Caminho para a pasta onde estão os arquivos e a lista
-diretorio="/mnt/d/Joao/0.1.JV_Data/assembled_all_samples/referencias/referencia_rhodantha"
+diretorio="/caminho/para/a/pasta"
 
 # Lê os nomes da lista e armazena em um array
-mapfile -t nomes < "$diretorio/lista455locos.txt"
+mapfile -t nomes < "$diretorio/lista_locos.txt"
 
 # Lista todos os arquivos no diretório (sem caminhos completos)
 arquivos=($(ls -A1 $diretorio))
 
 # Prepara o arquivo de saída, limpando-o se já existir
-> "$diretorio/locosfaltantes.txt"
+> "$diretorio/locos_faltantes.txt"
 
 # Loop para verificar cada nome na lista de nomes
 for nome in "${nomes[@]}"; do
