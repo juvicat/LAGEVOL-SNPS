@@ -25,6 +25,20 @@ for i in *.fas; do awk '{if( NR==1)print ">"FILENAME;else print}' "$i" > "$i.fas
 ```
 
 ## Montagem do arquivo de referência
+Um arquivo de referência é necessário para alinhar as sequências antes da extração de SNPs, e é possível usar as sequências de uma amostra para essa finalidade. É recomendável que a escolha da amostra a ser usada como referência seja baseada nas estatísticas geradas durante a montagem dos locos, como a amostra com menor número de locos faltantes ou com os locos com maior número de pares de base. 
+
+É possível também adicionar locos que não estão presentes no seu aqrquivo de referência, a partir de amostras que possuem estes locos. Para isso, crie uma lista com o nome de todos os locos disponíveis para sua amostragem (`lista_locos.txt`) e utilize o script `verificando_locos.sh` para detectar os faltantes na sua referência:
+```
+bash verificando_locos.sh
+```
+Este script gera uma lista com os locos faltantes, que pode ser usada para copiar estes locos a partir de outras amostras. Esta adição pode ser feita manualmente ou com o script `mover_locos_faltantes.txt` que irá copiar o loco da primeira amostra encontrada que possuí-lo. 
+```
+bash mover_locos_faltantes.txt
+```
+Uma vez que todos os locos da referência estejam reunidos eles precisam ser concatenados em um único arquivo:
+```
+cat *_supercontig.fasta > referencia.cat_supercontigs.fasta
+```
 
 ## Chamada de SNPs 
 
