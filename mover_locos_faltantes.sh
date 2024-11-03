@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Defina o caminho do arquivo locosfaltantes.txt
-lista="locosfaltantes.txt"
+lista="locos_faltantes.txt"
 
 # Loop para ler cada linha do arquivo lista
 while IFS= read -r arquivo; do
