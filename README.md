@@ -41,7 +41,7 @@ cat *_supercontig.fasta > referencia.cat_supercontigs.fasta
 ```
 
 ## Chamada de SNPs 
-Para a chamada de variantes (SNPs e indels) usaremos o GATK (https://github.com/broadinstitute/gatk.git). Inicialmente, usaremos o script `chamada_variantes.sh` para gerar um arquivo no formato GVCF para cada espécie trabalhada.
+Para a chamada de variantes (SNPs e indels) usaremos o GATK (https://github.com/broadinstitute/gatk.git). Inicialmente, usaremos o script `chamada_variantes.sh` para gerar um arquivo no formato GVCF para cada espécie trabalhada. Este script precisa ser adaptado para o ambiente em que será executado, conforme instruções no arquivo. 
 
 Para espécies com uma amostra:
 ```
