@@ -1,4 +1,4 @@
-# SNP-CALL
+# Geração de matriz de SNPs a partir de dados genômicos
 O presente repositório tem como objetivo a geração de uma matriz de SNPs a partir de dados genômicos obtidos via *target-enrichment sequencing* com o painel Cactaceae591 (Romeiro-Brito et al. 2022). Os programas e comandos necessários devem ser executados no sistema operacional Linux (ou no Subsistema Linux para Windows), através da interface Bash. 
 
 Os *scripts* utilizados foram adaptados do repositório [HybSeq-SNP-Extraction](https://github.com/lindsawi/HybSeq-SNP-Extraction.git), publicado por Madeline Slimp e Matthew Johnson.
