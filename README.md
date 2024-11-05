@@ -52,9 +52,9 @@ Para espécies com mais de uma amostra (a *flag* `nohup` executa o script em seg
 nohup bash chamada_variantes.sh referencia.cat_supercontigs.fasta nome_da_espécie &> variantcall.log &
 ```
 
-O script `GenotypesToPCA.sh` é utilizado para unir os arquivos GVCF:
+O script `juntar_GVCFs.sh` é utilizado para unir os arquivos GVCF e e realizar uma filtragem inicial de SNPs, além de remover os outros tipos de variantes:
 ```
-bash GenotypesToPCA.sh referencia.cat_supercontigs.fasta nome_do_taxon
+bash juntar_GVCFs.sh referencia.cat_supercontigs.fasta nome_do_taxon
 ```
 
 ## Filtragem de SNPs 
