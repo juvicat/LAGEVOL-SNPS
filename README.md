@@ -56,5 +56,15 @@ O script `juntar_GVCFs.sh` é utilizado para unir os arquivos GVCF e e realizar 
 ```
 bash juntar_GVCFs.sh referencia.cat_supercontigs.fasta nome_do_taxon
 ```
+Os outputs gerados por esse script serão: `nome_do_taxon.SNPall.gvcf` (contém todos os SNPs e indels), `nome_do_taxon.snp.filtered.gvcf` (contém todos os SNPs, sem os indels) e `nome_do_taxon.snp.filtered.nocall.gvcf` (apenas SNPs que passaram pelo filtro estabelecido). 
 
 ## Filtragem de SNPs 
+É interessante que uma segunda filtragem seja aplicada a matriz de SNPs, com o programa plink (https://github.com/insilico/plink.git). Parâmetros para o desequilíbrio de ligação (`--indep`) e para porcentagem de dados faltantes (`--geno`) podem ser estabelecidos editando o script `filtragem_plink.sh`.
+```
+bash filtragem_plink.sh nome_do_taxon
+```
+
+Por fim, o mesmo programa é utilizado para gerar um arquivo VCF a partir dos arquivos de saída do script:
+```
+plink --allow-extra-chr --bfile nome_do_taxon_pruned --recode vcf --out nome_do_taxon_pruned_vcf
+```
